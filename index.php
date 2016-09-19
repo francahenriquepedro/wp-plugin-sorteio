@@ -14,11 +14,11 @@
 define('SORTEIO_BASEPATH', plugin_dir_path(__FILE__));
 require_once SORTEIO_BASEPATH . 'class.sorteio.php';
 
-function theme_options_panel() {
+function sorteio_options_panel() {
     add_menu_page('Sorteio page title', 'Sorteio', 8, 'sorteio', 'sorteio_page_func');
 }
 
-add_action('admin_menu', 'theme_options_panel');
+add_action('admin_menu', 'sorteio_options_panel');
 
 function sorteio_page_func() {
     include SORTEIO_BASEPATH . 'page.php';

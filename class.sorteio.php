@@ -17,7 +17,7 @@ class Sorteio{
     public static function init(){
         while(count(self::$sorted) < self::$limit)://Enquanto não atingir a quantidade limite continua atribuindo números sorteados
             
-            $value = self::sort();//Valor sorteado
+            $value = self::raffle();//Valor sorteado
             
             if(!in_array($value, self::$sorted))//Se o valor sorteado for diferente dos demais atribui
                 self::$sorted[] = $value;
@@ -32,7 +32,7 @@ class Sorteio{
     /*
      * Função apenas para retornar os valores sorteados, caso estes valores tenham se perdido. Apenas para não realizar o sorteio novamente
      */
-    public static function get_sorted(){
+    public static function get_raffled(){
         return self::$sorted;
     }
 
@@ -41,7 +41,7 @@ class Sorteio{
      * pode-se substituir esse valor por qualquer ou tro método. Ex. Realizar um request para pegar o valor
      * retorna um numero inteiro (em caso de alteração pode retornar uma string)
      */
-    private static function sort(){
+    private static function raffle(){
         return mt_rand(1, 100);
     }
     
