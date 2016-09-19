@@ -2,7 +2,7 @@
 
 /* 
  * Objetivo desta classe é simular um sorteio
- * neste exemplo usarei a função nativa do php rand()
+ * neste exemplo usarei a função nativa do php mt_rand()
  * mas pode-se substituí-la por outro método
  */
 
@@ -42,7 +42,7 @@ class Sorteio{
      * retorna um numero inteiro (em caso de alteração pode retornar uma string)
      */
     private static function sort(){
-        return rand(1, 100);
+        return mt_rand(1, 100);
     }
     
 }
